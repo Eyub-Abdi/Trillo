@@ -1,0 +1,13 @@
+@import '../../sass/variables';
+
+.gallery {
+  display: flex;
+
+  &__item {
+  }
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}

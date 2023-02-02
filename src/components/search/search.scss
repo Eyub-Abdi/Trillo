@@ -1,0 +1,58 @@
+@import '../../sass/variables';
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: $defaultFontSize;
+    color: inherit;
+    background-color: $colorGreyLight-2;
+    border: none;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 100px;
+    width: 80%;
+    transition: all 0.2s;
+    margin-right: -3.5rem;
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $colorGreyLight-4;
+    }
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $colorGreyLight-3;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: $colorGreyLight-3;
+  }
+
+  &__button {
+    background-color: $colorGreyLight-2;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__search {
+    height: 2rem;
+    width: 2rem;
+    fill: $colorGreyDark-3;
+  }
+}

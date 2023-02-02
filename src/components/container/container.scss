@@ -1,0 +1,8 @@
+@import '../../sass/variables';
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: $colorGreyLight-2;
+  box-shadow: $shadowDark;
+}
