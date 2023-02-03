@@ -6,7 +6,6 @@ import { IoIosChatboxes } from 'react-icons/io'
 
 function HeaderNav() {
   const [massege, setMessage] = useState(10)
-  console.log(massege)
 
   return (
     <nav className="header-nav">
