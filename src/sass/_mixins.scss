@@ -1,0 +1,9 @@
+@mixin border-bottom($color) {
+  border-bottom: 1px solid $color;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

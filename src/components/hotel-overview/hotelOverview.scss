@@ -1,1 +1,80 @@
 @import '../../sass/variables';
+@import '../../sass/mixins';
+@import '../../sass/animations';
+
+.overview {
+  display: flex;
+  align-items: center;
+  @include border-bottom($colorGreyLight-2);
+
+  &__heading {
+    font-size: 2.27;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: $colorPrimary;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__rating {
+    background-color: $colorPrimary;
+    align-self: stretch;
+    color: $colorWhite;
+    margin-left: 3rem;
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    margin-bottom: -0.4rem;
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    padding: 0 2.25rem;
+    text-transform: uppercase;
+  }
+}
+
+// BUTTON STYLES
+.btn-inline {
+  border: none;
+  cursor: pointer;
+  color: $colorPrimary;
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $colorGreyDark-1;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

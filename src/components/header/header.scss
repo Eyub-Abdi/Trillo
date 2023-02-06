@@ -1,4 +1,5 @@
 @import '../../sass/variables';
+@import '../../sass/mixins';
 
 .main-header {
   background-color: $colorWhite;
@@ -6,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include border-bottom($colorGreyLight-2);
 }
 
 .logo {
