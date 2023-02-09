@@ -1,0 +1,62 @@
+@import '../../sass/variables';
+@import '../../sass/animations';
+
+.cta {
+  text-align: center;
+  box-shadow: $shadowLight;
+  // background-color: $colorGreyLight-1;
+  padding: 3.5rem 0;
+
+  &__book-now {
+    font-size: $defaultFontSize;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+}
+.btn {
+  font-size: $defaultFontSize;
+  border: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-image: linear-gradient(to right, $colorPrimaryLight, $colorPrimaryDark);
+  color: $colorWhite;
+  position: relative;
+  overflow: hidden;
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &__hiden {
+    position: absolute;
+    padding: 2rem 0;
+    top: -100%;
+    left: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, $colorPrimaryLight, $colorPrimaryDark);
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__hiden {
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

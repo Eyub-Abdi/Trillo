@@ -4,6 +4,7 @@ import './hotelView.scss'
 import Gallery from '../gallery/Gallery'
 import HotelOverview from '../hotel-overview/HotelOverview'
 import HotelDetails from '../hotel-details/HotelDetails'
+import CallToAction from '../cta/CallToAction'
 
 function HotelView() {
   return (
@@ -11,6 +12,7 @@ function HotelView() {
       <Gallery />
       <HotelOverview />
       <HotelDetails />
+      <CallToAction />
     </main>
   )
 }
