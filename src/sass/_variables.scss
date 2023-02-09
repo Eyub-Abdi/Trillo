@@ -17,6 +17,12 @@ $colorWhite: #fff;
 
 // SHADOWS
 $shadowDark: 0 2rem 6rem rgba($colorBlack, 0.3);
+$shadowLight: 0 2rem 5rem rgba($colorBlack, 0.06);
 
 // FONTSIZES
 $defaultFontSize: 1.6rem;
+$fontSizeSmall: 1.4rem;
+$fontSizeMedium: 2.25rem;
+
+// LINE
+$line: 0.1rem solid $colorGreyLight-1;

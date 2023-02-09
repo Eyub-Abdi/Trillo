@@ -1,0 +1,138 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.details {
+  font-size: $fontSizeSmall;
+  display: flex;
+  padding: 4.5rem;
+  background-color: $colorGreyLight-1;
+  @include border-bottom($colorGreyLight-1);
+
+  &__description {
+    font-size: $fontSizeSmall;
+    flex: 0 0 60%;
+    background-color: $colorWhite;
+    margin-right: 4.5rem;
+    padding: 3rem;
+    box-shadow: $shadowLight;
+    overflow: hidden;
+  }
+
+  &__user-review {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: $line;
+
+    display: flex;
+    flex-wrap: wrap;
+    @include border-bottom($colorGreyLight-1);
+
+    &__item {
+      flex: 0 0 50%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.7rem;
+    }
+  }
+  &__icon {
+    height: 1.27rem;
+    width: 1.27rem;
+    fill: $colorPrimary;
+    margin-right: 0.7rem;
+  }
+}
+
+.recommend {
+  color: $colorGreyDark-3;
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 2px solid $colorGreyLight-2;
+    margin-right: -10px;
+    box-sizing: content-box;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+// REVIEW COMPONET
+.review {
+  background-color: $colorWhite;
+  box-shadow: $shadowLight;
+  padding: 3rem;
+  margin-bottom: 3.4rem;
+  position: relative;
+  &__text {
+    z-index: 10;
+    position: relative;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  &__user-box {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    flex-direction: column;
+  }
+
+  &__user-name {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__user-date {
+    color: $colorGreyLight-4;
+    font-size: 1.2rem;
+    align-self: flex-start;
+  }
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__rating {
+    margin-left: auto;
+    color: $colorPrimary;
+    font-size: $fontSizeMedium;
+  }
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    color: $colorGreyLight-3;
+    font-size: 20rem;
+    top: -2rem;
+    left: -1rem;
+    font-family: sans-serif;
+    display: inline-block;
+    line-height: 1;
+    z-index: 1;
+  }
+}
