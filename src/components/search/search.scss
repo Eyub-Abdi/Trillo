@@ -7,6 +7,13 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-xsmall) {
+    order: 1;
+    flex: 0 0 100%;
+
+    background-color: $colorGreyLight-2;
+  }
+
   &__input {
     font-family: inherit;
     font-size: $defaultFontSize;

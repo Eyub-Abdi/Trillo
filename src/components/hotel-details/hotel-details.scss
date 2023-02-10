@@ -8,6 +8,14 @@
   background-color: $colorGreyLight-1;
   @include border-bottom($colorGreyLight-1);
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
   &__description {
     font-size: $fontSizeSmall;
     flex: 0 0 60%;
@@ -16,6 +24,16 @@
     padding: 3rem;
     box-shadow: $shadowLight;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 3rem;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
   }
 
   &__user-review {
@@ -66,6 +84,10 @@
     margin-right: auto;
   }
 
+  &__friends {
+    display: flex;
+  }
+
   &__photo {
     height: 4rem;
     width: 4rem;
@@ -87,6 +109,11 @@
   padding: 3rem;
   margin-bottom: 3.4rem;
   position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: 3rem;
+    padding: 2rem;
+  }
   &__text {
     z-index: 10;
     position: relative;

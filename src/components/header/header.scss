@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: space-between;
   @include border-bottom($colorGreyLight-2);
+
+  @media only screen and (max-width: $bp-xsmall) {
+    flex-wrap: wrap;
+    height: 12rem;
+    align-content: space-around;
+  }
 }
 
 .logo {
